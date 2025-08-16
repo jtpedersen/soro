@@ -4239,7 +4239,7 @@
   <property name="xhomefinalvel" type="float" value="0.0"/>
   <property name="xhomelatchvel" type="float" value="0.5"/>
   <property name="xhomepos" type="float" value="50.0"/>
-  <property name="xhomesearchvel" type="float" value="2.0"/>
+  <property name="xhomesearchvel" type="float" value="33.3333333333"/>
   <property name="xhomesequence" type="float" value="1.0"/>
   <property name="xhomesw" type="float" value="0.0"/>
   <property name="xhometandemsw" type="float" value="0.0"/>
@@ -4333,7 +4333,7 @@
   <property name="yhomefinalvel" type="float" value="0.0"/>
   <property name="yhomelatchvel" type="float" value="0.5"/>
   <property name="yhomepos" type="float" value="1000.0"/>
-  <property name="yhomesearchvel" type="float" value="2.0"/>
+  <property name="yhomesearchvel" type="float" value="33.3333333333"/>
   <property name="yhomesequence" type="float" value="2.0"/>
   <property name="yhomesw" type="float" value="1050.0"/>
   <property name="yhometandemsw" type="float" value="0.0"/>
@@ -4431,7 +4431,7 @@
   <property name="zhomefinalvel" type="float" value="0.0"/>
   <property name="zhomelatchvel" type="float" value="0.5"/>
   <property name="zhomepos" type="float" value="-10.0"/>
-  <property name="zhomesearchvel" type="float" value="2.0"/>
+  <property name="zhomesearchvel" type="float" value="33.3333333333"/>
   <property name="zhomesequence" type="float" value="0.0"/>
   <property name="zhomesw" type="float" value="0.0"/>
   <property name="zhometandemsw" type="float" value="0.0"/>
@@ -4439,11 +4439,11 @@
   <property name="zinvertencoder" type="bool" value="False"/>
   <property name="zinvertmotor" type="bool" value="False"/>
   <property name="zlatchdir" type="int" value="0"/>
-  <property name="zmaxacc" type="float" value="1750.0"/>
+  <property name="zmaxacc" type="float" value="1250.0"/>
   <property name="zmaxferror" type="float" value="10.0"/>
   <property name="zmaxlim" type="float" value="0.0"/>
   <property name="zmaxoutput" type="float" value="0.0"/>
-  <property name="zmaxvel" type="float" value="150.0"/>
+  <property name="zmaxvel" type="float" value="83.3333333333"/>
   <property name="zmicrostep" type="float" value="5.0"/>
   <property name="zminferror" type="float" value="1.0"/>
   <property name="zminlim" type="float" value="-140.0"/>
