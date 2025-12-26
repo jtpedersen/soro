@@ -1,0 +1,9 @@
+O <ztouch> sub
+G10 L20 P0 Z0		(set current Z = 0)
+G38.2 Z-50 F500	(probe down using a fast feedrate)
+G10 L20 P0 Z40.5	(set current Z = 40.05 probe_height)
+G1 Z42 F1500		(move up by 0.1mm)
+G38.2 Z-10 F50		(2nd pass: probe down using a slow feedrate to get better accuracy)
+G10 L20 P0 Z40.5	(set current Z = 40.05 probe_height)
+G0 Z55 F500		(move to 10mm above work piece)
+O <ztouch> endsub
