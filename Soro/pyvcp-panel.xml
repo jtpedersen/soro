@@ -27,5 +27,13 @@
                         <off_color>"red"</off_color>
                     </led>
                 </hbox>
-        </vbox>
+         </vbox>
+	 <vbox>
+	   <button>
+	     <relief>RAISED</relief>
+	     <halpin>"ztouch"</halpin>
+	     <text>"Touch off Z"</text>
+	     <font>("Helvetica",20)</font>
+	   </button>
+	 </vbox>
 </pyvcp>
