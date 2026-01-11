@@ -11,19 +11,14 @@ net spindle-at-speed        =>    pyvcp.spindle-at-speed-led
 net ztouch halui.mdi-command-00 <= pyvcp.ztouch
 
 
-# net spindle_pwr => toggle0
-# net spindle_coolant => toggle1
 
-#net spindle_pwr   <= relay1
-# net  coolant [HMOT](CARD0).ssr.00.out-00 pyvcp.spindle_coolant
-# net  power [HMOT](CARD0).ssr.00.out-01 pyvcp.spindle_power
+net enable_psu pyvcp.enable_psu
+net cabinet_light  pyvcp.cabinet_light
+net machine-is-on pyvcp.vfd_power
 
 
-net   relay_00  pyvcp.relay_00
-net   relay_01  pyvcp.relay_01
-net   relay_02  pyvcp.relay_02
-net   relay_03  pyvcp.relay_03
-net   relay_04  pyvcp.relay_04
-net   relay_05  pyvcp.relay_05
+#net  show_relay_03 relay_03  pyvcp.relay_03
+net  show_relay_04 relay_04  pyvcp.relay_04
+net  show_relay_05 relay_05  pyvcp.relay_05
 
 

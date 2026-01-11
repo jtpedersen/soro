@@ -1,96 +1,95 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <pyvcp>
-         <vbox>
-         <relief>RIDGE</relief>         
-         <bd>6</bd>
-                <label>
-                        <text>"Spindle Speed:"</text>
-                        <font>("Helvetica",20)</font>
-                </label>
-                <bar>
-                        <halpin>"spindle-speed"</halpin>
-                        <max_>24000</max_>
-                </bar>
-                <label>
-                        <text>"Spindle-At-Speed:"</text>
-                        <font>("Helvetica",20)</font>
-                </label>
-                <hbox>
-                    <label>
-                            <text>"             "</text>
-                            <font>("Helvetica",20)</font>
-                    </label>
-                    <led>
-                        <halpin>"spindle-at-speed-led"</halpin> 
-                        <size>30</size> 
-                        <on_color>"green"</on_color>
-                        <off_color>"red"</off_color>
-                    </led>
-                </hbox>
-         </vbox>
-	 <vbox>
-	   <button>
-	     <relief>RAISED</relief>
-	     <halpin>"ztouch"</halpin>
-	     <text>"Touch off Z"</text>
-	     <font>("Helvetica",20)</font>
-	   </button>
-	 </vbox>
-       	 <vbox>
-	   <checkbutton>
-	     <relief>RAISED</relief>
-	     <halpin>"spindle_power"</halpin>
-	     <text>"spindle power"</text>
-	     <font>("Helvetica",20)</font>
-	   </checkbutton>
-	 </vbox>
-	 <vbox>
-	   <checkbutton>
-	     <relief>RAISED</relief>
-	     <halpin>"spindle_coolant"</halpin>
-	     <text>"spindle cooling"</text>
-	     <font>("Helvetica",20)</font>
-           </checkbutton>
-	 </vbox>
+  <vbox>
+    <relief>RIDGE</relief>         
+    <bd>6</bd>
+    <label>
+      <text>"VFD power:"</text>
+      <font>("Helvetica",20)</font>
+    </label>
+    <led>
+        <halpin>"vfd_power"</halpin> 
+        <size>30</size> 
+        <on_color>"green"</on_color>
+        <off_color>"red"</off_color>
+      </led>
 
-       	 <vbox>
-	   <checkbutton>
-	     <relief>RAISED</relief>
-	     <halpin>"relay_00"</halpin>
-	     <text>"relay 00"</text>
-	     <font>("Helvetica",20)</font>
-	   </checkbutton>
-	   <checkbutton>
-	     <relief>RAISED</relief>
-	     <halpin>"relay_01"</halpin>
-	     <text>"relay 01"</text>
-	     <font>("Helvetica",20)</font>
-	   </checkbutton>
-	   <checkbutton>
-	     <relief>RAISED</relief>
-	     <halpin>"relay_02"</halpin>
-	     <text>"relay 02"</text>
-	     <font>("Helvetica",20)</font>
-	   </checkbutton>
-	   <checkbutton>
-	     <relief>RAISED</relief>
-	     <halpin>"relay_03"</halpin>
-	     <text>"relay 03"</text>
-	     <font>("Helvetica",20)</font>
-	   </checkbutton>
-	   <checkbutton>
-	     <relief>RAISED</relief>
-	     <halpin>"relay_04"</halpin>
-	     <text>"relay 04"</text>
-	     <font>("Helvetica",20)</font>
-	   </checkbutton>
-	   <checkbutton>
-	     <relief>RAISED</relief>
-	     <halpin>"relay_05"</halpin>
-	     <text>"relay 05"</text>
-	     <font>("Helvetica",20)</font>
-	   </checkbutton>
-	 </vbox>
+    <label>
+      <text>"Spindle Speed:"</text>
+      <font>("Helvetica",20)</font>
+    </label>
+    <bar>
+      <halpin>"spindle-speed"</halpin>
+      <max_>24000</max_>
+    </bar>
+    <label>
+      <text>"Spindle-At-Speed:"</text>
+      <font>("Helvetica",20)</font>
+    </label>
+    <hbox>
+      <label>
+        <text>"             "</text>
+        <font>("Helvetica",20)</font>
+      </label>
+      <led>
+        <halpin>"spindle-at-speed-led"</halpin> 
+        <size>30</size> 
+        <on_color>"green"</on_color>
+        <off_color>"red"</off_color>
+      </led>
 
-         
+    </hbox>
+  </vbox>
+  <vbox>
+    <button>
+      <relief>RAISED</relief>
+      <halpin>"ztouch"</halpin>
+      <text>"Touch off Z"</text>
+      <font>("Helvetica",20)</font>
+    </button>
+  </vbox>
+
+  <vbox>
+    <label>
+      <text>"External devices:"</text>
+      <font>("Helvetica",20)</font>
+    </label>
+    <checkbutton>
+      <relief>RAISED</relief>
+      <halpin>"cabinet_light"</halpin>
+      <text>"Cabinet Light"</text>
+      <font>("Helvetica",20)</font>
+    </checkbutton>
+    <checkbutton>
+      <relief>RAISED</relief>
+      <halpin>"enable_psu"</halpin>
+      <text>"PSU enabled"</text>
+      <initval>1</initval>
+      <font>("Helvetica",20)</font>
+    </checkbutton>
+
+
+  </vbox>
+  <vbox>
+
+    <label>
+      <text>"non dedicated relays:"</text>
+      <font>("Helvetica",20)</font>
+    </label>
+
+    <checkbutton>
+      <relief>RAISED</relief>
+      <halpin>"relay_04"</halpin>
+      <text>"relay 04"</text>
+      <font>("Helvetica",20)</font>
+    </checkbutton>
+    <checkbutton>
+      <relief>RAISED</relief>
+      <halpin>"relay_05"</halpin>
+      <text>"relay 05"</text>
+      <font>("Helvetica",20)</font>
+    </checkbutton>
+  </vbox>
+
+  
 </pyvcp>

@@ -1,10 +1,31 @@
-net  relay_00 => [HMOT](CARD0).ssr.00.out-00
-net  relay_01 => [HMOT](CARD0).ssr.00.out-01
-net  relay_02 => [HMOT](CARD0).ssr.00.out-02
-net  relay_03 => [HMOT](CARD0).ssr.00.out-03
-net  relay_04 => [HMOT](CARD0).ssr.00.out-04
-net  relay_05 => [HMOT](CARD0).ssr.00.out-05
+# 8 - channel relay board connected to the 6 outputs from mesa card
+alias pin [HMOT](CARD0).ssr.00.out-00 relay_00 # has a slave on output 6
+alias pin [HMOT](CARD0).ssr.00.out-01 relay_01 # has a slave on output 7
+alias pin [HMOT](CARD0).ssr.00.out-02 relay_02
+alias pin [HMOT](CARD0).ssr.00.out-03 relay_03
+alias pin [HMOT](CARD0).ssr.00.out-04 relay_04
+alias pin [HMOT](CARD0).ssr.00.out-05 relay_05
 
 
-# net pwr_psu  machine-is-on => [HMOT](CARD0).ssr.00.out-00
-# net relay_01 spindle-enable 
+# relay 00 Power PSU
+
+# This is inverted so its always on when HAL is running, but a button
+# and toggle it manually in UI, this is useful to reset alarms
+# Connected to a relay with a slave, as we may need to toggle otherthings (tm) here
+# setp TRUE [HMOT](CARD0).ssr.00.invert-00
+setp relay_00 TRUE 
+net enable_psu => relay_00
+
+
+
+# Start the spindle liquid cooling pump
+# Connected to a relay with a slave, as this would be ideal for hooking up dustcollection
+net  spindle-enable => relay_01
+
+# Power to VFD, which is noisy, so only start with machine
+net machine-is-on => relay_02
+
+
+# Light in cabinet
+net cabinet-light => relay_03
+
