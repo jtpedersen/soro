@@ -1,0 +1,55 @@
+Stepper Drivers [[file:LCDA357H.pdf]] 
+Other doc: [[https://forum.linuxcnc.org/39-pncconf/40366-lichaun-lcda357h-setup][Linux cnc forum post]]
+#+BEGIN_QUOTE
+Alarm LED
+
+flashing times - problem description
+------------------------------------
+ 1  over current
+ 2  over speed
+ 3  loose step
+ 4  over load
+ 5  driver too hot
+ 6  over voltage
+ 7  motor connection error
+ 8  encoder connection error
+ 9  low voltage
+10  Position deviation is too large
+#+END_QUOTE
+
+This does not match the manual, which only has  3 entries
+
+#+BEGIN_QUOTE
+The green indicator turns on when power-up. When drive protection is activated,
+the red LED blinks periodicity to indicate the errors.
+* Red light flashing one of one cycle is over current fault
+* A red light flashes 2 times in the cycle is over voltage fault
+* The red light flashing 7 times of one cycle is positional deviation is too large
+#+END_QUOTE
+
+
+
+*  Configuration:
+
+ Steps pr rev 800
+
+ | sw 1 | sw2 | sw 3 | sw4 |
+ |------+-----+------+-----|
+ |    1 |   0 |    0 |   0 |
+
+
+
+* Lessons learned
+  
+** Alarm blink
+   It seems like 3 blinks means "lost steps" i saw this when hitting z-axis endstop
+
+   
+** When hitting too high accelleration 
+   all drivers got 2 blinks
+
+   I suspect a power surge from the PSU.
+
+   Current plan is to run with conservative speed / acc settings
+
+   Consider getting a better / smaller PSU with guranteed 48V ..

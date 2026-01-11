@@ -1,0 +1,44 @@
+* Soro
+
+Configuration and documentation for my CNC.
+
+Based on a kit from Sorotec, running Linuxcnc with a mesa 7i96
+ethernet board.
+
+
+
+
+
+
+
+
+
+* TODO [0/6]
+
+  A never ending list of tasks that could be done, when the mood is right
+
+  
+** TODO Add fuse to relay board
+
+   For good measure mount the fuse, so any faults are caught before
+   triggring the house fuses or creating nice electrical arcs
+
+   
+** TODO Create mount for relay board
+
+** TODO Wire up dustcollection to relays
+
+** TODO Mount camera for camera alignment
+
+   See this thread for more information:  [[https://forum.linuxcnc.org/plasmac/40057-camera-for-touchoff]["Camera For Touchoff"]]
+   
+** TODO Make shelf in cabinet and Move PC into cabinet 
+   Why did I ever mount it in a the cupboard on wheels with a long
+   thick "umbilical cord"? 
+
+   Use wired network instead of wireless?
+
+   
+** TODO Try Qt based ui instead of Axis
+
+   

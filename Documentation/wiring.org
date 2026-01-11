@@ -1,0 +1,93 @@
+
+
+
+
+#+begin_src plantuml :file my-diagram.png
+title Soro wiring diagram
+
+
+X_driver.pull -- Mesa7i96.step0.step
+X_driver.dir -- Mesa7i96.step0.dir
+X_driver.ena -- Mesa7i96.out.step_enable
+X_driver.alarm -- Mesa7i96.in.alarm_x
+X_driver.ena_gnd -- Mesa7i96.gnd
+X_driver.alarm_gnd -- Mesa7i96.gnd
+
+Y_driver.pull -- Mesa7i96.step1.step
+Y_driver.dir -- Mesa7i96.step1.dir
+Y_driver.ena -- Mesa7i96.out.step_enable
+Y_driver.alarm -- Mesa7i96.in.alarm_y
+Y_driver.ena_gnd -- Mesa7i96.gnd
+Y_driver.alarm_gnd -- Mesa7i96.gnd
+
+Z_driver.pull -- Mesa7i96.step2.step
+Z_driver.dir -- Mesa7i96.step2.dir
+Z_driver.ena -- Mesa7i96.out.step_enable
+Z_driver.alarm -- Mesa7i96.in.alarm_z
+Z_driver.ena_gnd -- Mesa7i96.gnd
+Z_driver.alarm_gnd -- Mesa7i96.gnd
+
+
+package Limits {
+X_limit -- Mesa7i96.in.x_limit  
+X_limit_gnd -- Mesa7i96.gnd
+
+Y_limit -- Mesa7i96.in.y_limit
+Y_limit_gnd -- Mesa7i96.gnd
+
+Z_limit -- Mesa7i96.in.z_limit
+Z_limit_gnd -- Mesa7i96.gnd
+}
+
+package ToolSensor {
+TS -- Mesa7i96.in.tool
+TS_gnd -- Mesa7i96.gnd
+}
+
+'package spindle {
+spindle.relay -- Mesa7i96.out.spindle_enable
+spindle.relay_gnd -- Mesa7i96.gnd
+
+spindle.serial -- Mesa7i96.spindle_serial
+
+
+
+#+end_src
+
+* Output
+
+ Cat5 cable
+
+| Gnd  | Vcc (5V)  | ch1/mesa.out.0+ | ch2 / mesa.out.1+ |   |   |   |   |
+|------+-----------+-----------------+-------------------+---+---+---+---|
+| blue | half blue | brown           | half brown        |   |   |   |   |
+
+
+Forbind all mesa OUT+ signaler
+OUT- til gnd
+
+8 channel relay module er active LOW
+
+channel 0 har relay 6 som slave
+channel 1 har relay 7 som slave
+
+Der er kun 6 outputs men 8 relays, så ..
+
+
+
+|-------+------------|
+| out5+ |            |
+| out5- |            |
+| out4+ |            |
+| out4- |            |
+| out3+ |            |
+| out3- |            |
+|-------+------------|
+| out2+ | Green      |
+| out2- |            |
+| out1+ | half brown |
+| out1- |            |
+| out0+ | Brown      |
+| out0- |            |
+|-------+------------|
+|       |            |
