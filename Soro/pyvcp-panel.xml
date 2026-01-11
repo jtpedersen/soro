@@ -1,19 +1,23 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <pyvcp>
-  <vbox>
-    <relief>RIDGE</relief>         
-    <bd>6</bd>
-    <label>
-      <text>"VFD power:"</text>
-      <font>("Helvetica",20)</font>
-    </label>
-    <led>
+  <labelframe text="Spindle">
+    <font>("Helvetica",24)</font>
+    <relief>GROOVE</relief>         
+    <bd>12</bd>
+    <hbox>
+      <relief>GROOVE</relief>         
+      <bd>2</bd>
+      <label>
+	<text>"VFD power:"</text>
+	<font>("Helvetica",20)</font>
+      </label>
+      <led>
         <halpin>"vfd_power"</halpin> 
-        <size>30</size> 
+        <size>20</size> 
         <on_color>"green"</on_color>
         <off_color>"red"</off_color>
       </led>
-
+    </hbox>
     <label>
       <text>"Spindle Speed:"</text>
       <font>("Helvetica",20)</font>
@@ -22,14 +26,12 @@
       <halpin>"spindle-speed"</halpin>
       <max_>24000</max_>
     </bar>
-    <label>
-      <text>"Spindle-At-Speed:"</text>
-      <font>("Helvetica",20)</font>
-    </label>
     <hbox>
+      <relief>GROOVE</relief>         
+      <bd>2</bd>
       <label>
-        <text>"             "</text>
-        <font>("Helvetica",20)</font>
+	<text>"Spindle At Speed:"</text>
+	<font>("Helvetica",20)</font>
       </label>
       <led>
         <halpin>"spindle-at-speed-led"</halpin> 
@@ -37,59 +39,68 @@
         <on_color>"green"</on_color>
         <off_color>"red"</off_color>
       </led>
-
     </hbox>
-  </vbox>
-  <vbox>
-    <button>
-      <relief>RAISED</relief>
-      <halpin>"ztouch"</halpin>
-      <text>"Touch off Z"</text>
-      <font>("Helvetica",20)</font>
-    </button>
-  </vbox>
+  </labelframe>
 
-  <vbox>
-    <label>
-      <text>"External devices:"</text>
-      <font>("Helvetica",20)</font>
-    </label>
-    <checkbutton>
-      <relief>RAISED</relief>
-      <halpin>"cabinet_light"</halpin>
-      <text>"Cabinet Light"</text>
-      <font>("Helvetica",20)</font>
-    </checkbutton>
-    <checkbutton>
-      <relief>RAISED</relief>
-      <halpin>"enable_psu"</halpin>
-      <text>"PSU enabled"</text>
-      <initval>1</initval>
-      <font>("Helvetica",20)</font>
-    </checkbutton>
+  <labelframe text="ToolSetter">
+    <font>("Helvetica",24)</font>
+    <relief>GROOVE</relief>         
+    <bd>12</bd>
+    <hbox>
+      <button>
+	<relief>RAISED</relief>
+	<halpin>"ztouch"</halpin>
+	<text>"Touch off Z"</text>
+	<font>("Helvetica",20)</font>
+      </button>
+    </hbox>
+  </labelframe>
+
+  <labelframe text="Power">
+    <font>("Helvetica",24)</font>
+    <relief>GROOVE</relief>         
+    <bd>12</bd>
+    <vbox>
+      <label>
+	<text>"External devices:"</text>
+	<font>("Helvetica",20)</font>
+      </label>
+      <checkbutton>
+	<relief>RAISED</relief>
+	<halpin>"cabinet_light"</halpin>
+	<text>"Cabinet Light"</text>
+	<font>("Helvetica",20)</font>
+      </checkbutton>
+      <checkbutton>
+	<relief>RAISED</relief>
+	<halpin>"enable_psu"</halpin>
+	<text>"PSU enabled"</text>
+	<initval>1</initval>
+	<font>("Helvetica",20)</font>
+      </checkbutton>
+    </vbox>
+  </labelframe>
 
 
-  </vbox>
-  <vbox>
+  <labelframe text="unused relays">
+    <font>("Helvetica",20)</font>
+    <relief>GROOVE</relief>         
+    <bd>12</bd>
 
-    <label>
-      <text>"non dedicated relays:"</text>
-      <font>("Helvetica",20)</font>
-    </label>
-
-    <checkbutton>
-      <relief>RAISED</relief>
-      <halpin>"relay_04"</halpin>
-      <text>"relay 04"</text>
-      <font>("Helvetica",20)</font>
-    </checkbutton>
-    <checkbutton>
-      <relief>RAISED</relief>
-      <halpin>"relay_05"</halpin>
-      <text>"relay 05"</text>
-      <font>("Helvetica",20)</font>
-    </checkbutton>
-  </vbox>
-
+    <vbox>
+      <checkbutton>
+	<relief>RAISED</relief>
+	<halpin>"relay_04"</halpin>
+	<text>"relay 04"</text>
+	<font>("Helvetica",20)</font>
+      </checkbutton>
+      <checkbutton>
+	<relief>RAISED</relief>
+	<halpin>"relay_05"</halpin>
+	<text>"relay 05"</text>
+	<font>("Helvetica",20)</font>
+      </checkbutton>
+    </vbox>
+  </labelframe>
   
 </pyvcp>

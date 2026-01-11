@@ -13,7 +13,7 @@ net ztouch halui.mdi-command-00 <= pyvcp.ztouch
 
 
 net enable_psu pyvcp.enable_psu
-net cabinet_light  pyvcp.cabinet_light
+net cabinet-light pyvcp.cabinet_light
 net machine-is-on pyvcp.vfd_power
 
 
