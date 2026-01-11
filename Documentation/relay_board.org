@@ -1,0 +1,35 @@
+* Relayboard
+
+
+I have installed an 8-channel relay board to control various power
+things.
+
+
+In [[file:wiring.org]] there is a "schematic" the basic idea is that from
+the 6 outputs on the mesa board there is a network cable and the first
+two relays also have slave relays.
+
+So =mesa.relay_00= controls relay 0 and 6
+
+The intention is to control power to both spindle water cooling and
+dust collection when machine is running. etc
+
+
+
+I designed a nice mount board to mount the relay on with wago clips,
+hidden cabling and strain-relief for cables.
+
+[[images/20260111_122400.jpg]]
+[[images/20260111_122405.jpg]]
+[[images/20260111_122432.jpg]]
+
+
+
+I still need to create a wall-mount, but I have added a
+snap-fit-groove and tested it with the current printed version.
+
+[[images/nice-rats-nest.png]]
+
+
+
+
