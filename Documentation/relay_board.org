@@ -18,6 +18,7 @@ dust collection when machine is running. etc
 
 I designed a nice mount board to mount the relay on with wago clips,
 hidden cabling and strain-relief for cables.
+[[https://www.printables.com/model/1552269-8-channel-relay-mount]]
 
 [[images/20260111_122400.jpg]]
 [[images/20260111_122405.jpg]]
