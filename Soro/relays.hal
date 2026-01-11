@@ -1,0 +1,10 @@
+net  relay_00 => [HMOT](CARD0).ssr.00.out-00
+net  relay_01 => [HMOT](CARD0).ssr.00.out-01
+net  relay_02 => [HMOT](CARD0).ssr.00.out-02
+net  relay_03 => [HMOT](CARD0).ssr.00.out-03
+net  relay_04 => [HMOT](CARD0).ssr.00.out-04
+net  relay_05 => [HMOT](CARD0).ssr.00.out-05
+
+
+# net pwr_psu  machine-is-on => [HMOT](CARD0).ssr.00.out-00
+# net relay_01 spindle-enable 

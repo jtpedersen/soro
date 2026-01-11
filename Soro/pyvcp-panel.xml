@@ -36,4 +36,61 @@
 	     <font>("Helvetica",20)</font>
 	   </button>
 	 </vbox>
+       	 <vbox>
+	   <checkbutton>
+	     <relief>RAISED</relief>
+	     <halpin>"spindle_power"</halpin>
+	     <text>"spindle power"</text>
+	     <font>("Helvetica",20)</font>
+	   </checkbutton>
+	 </vbox>
+	 <vbox>
+	   <checkbutton>
+	     <relief>RAISED</relief>
+	     <halpin>"spindle_coolant"</halpin>
+	     <text>"spindle cooling"</text>
+	     <font>("Helvetica",20)</font>
+           </checkbutton>
+	 </vbox>
+
+       	 <vbox>
+	   <checkbutton>
+	     <relief>RAISED</relief>
+	     <halpin>"relay_00"</halpin>
+	     <text>"relay 00"</text>
+	     <font>("Helvetica",20)</font>
+	   </checkbutton>
+	   <checkbutton>
+	     <relief>RAISED</relief>
+	     <halpin>"relay_01"</halpin>
+	     <text>"relay 01"</text>
+	     <font>("Helvetica",20)</font>
+	   </checkbutton>
+	   <checkbutton>
+	     <relief>RAISED</relief>
+	     <halpin>"relay_02"</halpin>
+	     <text>"relay 02"</text>
+	     <font>("Helvetica",20)</font>
+	   </checkbutton>
+	   <checkbutton>
+	     <relief>RAISED</relief>
+	     <halpin>"relay_03"</halpin>
+	     <text>"relay 03"</text>
+	     <font>("Helvetica",20)</font>
+	   </checkbutton>
+	   <checkbutton>
+	     <relief>RAISED</relief>
+	     <halpin>"relay_04"</halpin>
+	     <text>"relay 04"</text>
+	     <font>("Helvetica",20)</font>
+	   </checkbutton>
+	   <checkbutton>
+	     <relief>RAISED</relief>
+	     <halpin>"relay_05"</halpin>
+	     <text>"relay 05"</text>
+	     <font>("Helvetica",20)</font>
+	   </checkbutton>
+	 </vbox>
+
+         
 </pyvcp>
